@@ -1,4 +1,5 @@
 import { urls } from "./constant.js";
+import { formatDateRelative } from "./utils.js";
 
 const data = await fetch(urls.post)
     .then(res => res.json())
@@ -27,7 +28,7 @@ posts.forEach(post => {
     content.textContent = post.content;
     const date = document.createElement('p');
     date.classList.add('post-date');
-    date.textContent = post.date;
+    date.textContent = formatDateRelative(post.date);
 
     header.appendChild(title);
     footer.appendChild(content);
