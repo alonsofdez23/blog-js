@@ -32,8 +32,9 @@ posts.forEach(post => {
     header.appendChild(title);
     footer.appendChild(content);
     footer.appendChild(date);
-    article.appendChild(header);
-    article.appendChild(footer);
+    link.appendChild(header);
+    link.appendChild(footer);
+    article.appendChild(link);
 
     postsList.appendChild(article);
 });
