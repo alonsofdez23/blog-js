@@ -14,6 +14,7 @@ posts.forEach(post => {
 
     const article = document.createElement('article');
     article.classList.add('post');
+    article.dataset.id = post.id;
     const link = document.createElement('a');
     link.classList.add('post-link');
     const header = document.createElement('header');
